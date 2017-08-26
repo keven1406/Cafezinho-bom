@@ -1,9 +1,7 @@
 const listaDeCafe = []
 //acao(array):: string -> string -> numero -> obj
 const acao = adicionar => cafe => gosto => nivel => {
-	return adicionar.push({marca: cafe,
-						  sabor: gosto,
-						  nivelDoSabor: nivel}) 
+	return adicionar.push({marca: cafe, sabor: gosto, nivelDoSabor: nivel}) 
 }
  
 const adicionarCafes = acao(listaDeCafe)
