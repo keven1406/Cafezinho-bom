@@ -5,18 +5,17 @@ const acao = adicionar => cafe => gosto => nivel => {
 }
  
 const adicionarCafes = acao(listaDeCafe)
-adicionarCafes('SÃ£o Braz')('Bom')(6)
-adicionarCafes('Santa Clara')('Ã“timo')(10)
-adicionarCafes('Melita')('Ã“timo')(10)
+adicionarCafes('São Braz')('Bom')(6)
+adicionarCafes('Santa Clara')('Ótimo')(10)
+adicionarCafes('Melita')('Ótimo')(10)
 adicionarCafes('Petinho')('Ruim')(4)
 
 //acessarLista:: string -> array
-const acessarLista = procurarNaLista => saborInserido => 
-	procurarNaLista.filter(valor => valor.sabor === saborInserido) 
-const verificarSabor = acessarLista(listaDeCafe)
-console.log(verificarSabor('Ã“timo'))
+const acessarLista = lista => verificarSabor => 
+	lista.filter(verificarSabor) 
 
-
-
-
+//verificarSabor:: item -> boolean
+const verificarSabor = gostoDoCafe => cafe => cafe.sabor === gostoDoCafe
+const verGostoDoCafe = acessarLista(listaDeCafe)
+console.log(verGostoDoCafe(verificarSabor('Ótimo')))
 
